@@ -321,3 +321,104 @@ class Person {
 const sam = new Person("Sam")
 
 console.log(sam);
+
+
+
+/*
+    Type Assertions - utilizado para consumir API
+    O objeto {} as deve seguir o padrão do UserResonse
+*/
+type UserResponse = {
+    ui: number;
+    name: string;
+    avatar: string;
+}
+let userResponse = {} as UserResponse;
+userResponse.name
+
+// Tipagem para um objeto
+type Point = {
+    x: number;
+    y: number;
+}
+function printCoord(points: Point) {
+    console.log(`O eixo x é: ${points.x}`);
+    console.log(`O eixo x é: ${points.y}`);
+}
+
+printCoord({x: 101, y: 50});
+
+// propriedade opcional
+type NewUser = {
+    name: string;
+    email: string;
+    age: number;
+    isAdmin?: boolean;
+}
+
+let usuario: NewUser = {
+    name: 'Bruno',
+    email: 'bruno@gmail.com',
+    age: 17
+}
+
+type Profile = {
+    id: number;
+    name: string;
+}
+
+type Char = {
+    nickname: string;
+    level: number;
+}
+
+// Union de tipos
+type PlayerInfo = Profile & Char;
+
+let info : PlayerInfo = {
+    id: 1,
+    name: 'Bruno',
+    nickname: 'Lima',
+    level: 10
+}
+
+// Interface - tipando parametro de uma função
+interface Usuario {
+    id: number;
+    name: string;
+}
+
+function registerNewUser(newUser: Usuario) {
+    newUser.name;
+}
+
+
+type TUser = {
+    id: number;
+    name: string;
+}
+
+type TPayment = {
+    method: string;
+}
+
+// union de types
+type TAccount = TUser & TPayment;
+
+
+interface IUs {
+    id: number;
+    name: string;
+}
+
+interface IPayment {
+    method: string;
+}
+
+interface IAccount extends IUs, IPayment {}
+
+let xt: IAccount;
+
+function exemplo(a, b) {
+    return a + b;
+}

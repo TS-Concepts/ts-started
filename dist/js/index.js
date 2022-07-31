@@ -10,6 +10,10 @@ x = 210;
 console.log(x);
 let y = 12;
 let z = 12;
+function showName(user, ticket) {
+    console.log(`Olá ${user} seu ticket é ${ticket}`);
+}
+showName('Bruno', 123);
 let firstName = "Matheus";
 let age = 30;
 const isAdmin = true;
@@ -17,6 +21,10 @@ console.log(typeof firstName);
 firstName = "João";
 console.log(firstName);
 const myNumbers = [1, 2, 3];
+let numbers;
+numbers = [1, 2, 3, 4, 5];
+let users;
+users = ['Bruno', 'Jose'];
 let myTuple;
 myTuple = [5, "bruno", ["a", "b"]];
 console.log(myTuple);
@@ -34,6 +42,10 @@ let id = "10";
 const userId = 10;
 const productId = "0001";
 console.log(typeof (productId));
+let userID;
+let adminId;
+userID = 'false';
+adminId = 10;
 var Size;
 (function (Size) {
     Size["P"] = "Pequeno";
@@ -163,3 +175,28 @@ Person = __decorate([
 ], Person);
 const sam = new Person("Sam");
 console.log(sam);
+let userResponse = {};
+userResponse.name;
+function printCoord(points) {
+    console.log(`O eixo x é: ${points.x}`);
+    console.log(`O eixo x é: ${points.y}`);
+}
+printCoord({ x: 101, y: 50 });
+let usuario = {
+    name: 'Bruno',
+    email: 'bruno@gmail.com',
+    age: 17
+};
+let info = {
+    id: 1,
+    name: 'Bruno',
+    nickname: 'Lima',
+    level: 10
+};
+function registerNewUser(newUser) {
+    newUser.name;
+}
+let xt;
+function exemplo(a, b) {
+    return a + b;
+}
