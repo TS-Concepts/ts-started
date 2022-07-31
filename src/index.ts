@@ -15,8 +15,14 @@ console.log(x);
 
 let y = 12;           // definindo uma variavel como inferencia
 
-let z: number = 12;   // definindo uma variavel como annotation
+let z: number = 12;   // definindo uma variavel como annotation ou tipagem explicita
 
+// tipagem explícita - quando definimos o tipo após a variavel
+function showName(user: string, ticket: number) {
+    console.log(`Olá ${user} seu ticket é ${ticket}`)
+}
+
+showName('Bruno', 123);
 
 // Tipos básicos todos são definidos em caixa baixa.
 let firstName: string  = "Matheus"
@@ -32,6 +38,14 @@ console.log(firstName);
 
 // object - os arrays
 const myNumbers: number[] = [1,2,3]
+
+
+let numbers: number[];
+
+numbers = [1,2,3,4,5]
+
+let users: Array<string>;
+users = ['Bruno', 'Jose'];
 
 
 // tipo de dado - tuplas 
@@ -57,7 +71,8 @@ a = "teste"
 a = true
 a = [];
 
-console.log(a)
+console.log(a);
+
 
 
 // union type - definindo mais de um tipo de dado
@@ -70,6 +85,18 @@ const userId: myIdType = 10
 const productId: myIdType = "0001";
 
 console.log(typeof(productId));
+
+
+// Type - reaproveita a tipagem em lugares diferentes
+type IdType = string | number | undefined;
+
+let userID: IdType;
+let adminId: IdType;
+
+userID = 'false';
+adminId = 10;
+
+
 
 // enum - enumera uma coleção 
 // exemplo de utilização - tamanho de roupas (size: Médio, size: Pequeno ...)
